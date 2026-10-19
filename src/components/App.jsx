@@ -14,14 +14,14 @@ import Register from "./Register/Register.jsx";
 import InfoTooltip from "./InfoTooltip/InfoTooltip.jsx";
 import ProtectedRoute from "./ProtectedRoute/ProtectedRoute.jsx";
 import CurrentUserContext from "../contexts/CurrentUserContext.js";
-import api from "../utils/api";
-import * as auth from "../utils/auth";
+import api from "../utils/api.js";
+import * as auth from "../utils/auth.js";
 import { POPUPS } from "../utils/popups.js";
-import EditProfile from "./Main/components/popup/EditProfile.jsx";
-import NewCard from "./Main/components/popup/NewCard.jsx";
-import EditAvatar from "./Main/components/popup/EditAvatar.jsx";
-import ImagePopup from "./Main/components/popup/ImagePopup.jsx";
-import RemoveCard from "./Main/components/popup/RemoveCard.jsx";
+import EditProfile from "./Main/components/Popup/EditProfile.jsx";
+import NewCard from "./Main/components/Popup/NewCard.jsx";
+import EditAvatar from "./Main/components/Popup/EditAvatar.jsx";
+import ImagePopup from "./Main/components/Popup/ImagePopup.jsx";
+import RemoveCard from "./Main/components/Popup/RemoveCard.jsx";
 
 const TOKEN_KEY = "jwt";
 

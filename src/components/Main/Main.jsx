@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import avatarImg from "../../images/profile-photo.png";
 import Card from "./components/Card/Card.jsx";
-import Popup from "./components/popup/Popup.jsx";
+import Popup from "./components/Popup/Popup.jsx";
 import CurrentUserContext from "../../contexts/CurrentUserContext.js";
 import { POPUPS } from "../../utils/popups.js";
 import "../../blocks/page.css";
