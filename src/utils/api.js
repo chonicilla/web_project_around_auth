@@ -1,26 +1,21 @@
 class Api {
   constructor(options) {
     this._options = options;
-    this._token = "";
-  }
-
-  setToken(token) {
-    this._token = token;
   }
 
   _request(endpoint, method = "GET", body = undefined) {
     const apiOptions = {
       method,
       headers: {
-        Authorization: `Bearer ${this._token}`,
+        authorization: this._options.apiAuthorization,
       },
     };
 
     if (body !== undefined && method !== "GET") {
       apiOptions.body = JSON.stringify(body);
       apiOptions.headers = {
-        Authorization: apiOptions.headers.Authorization,
-        "Content-Type": "application/json",
+        authorization: apiOptions.headers.authorization,
+        "content-type": "application/json",
       };
     }
 
@@ -102,6 +97,7 @@ class Api {
 
 const api = new Api({
   apiUrl: "https://around-api.es.tripleten-services.com/",
+  apiAuthorization: "c9e7bc5c-4ea1-48aa-a8be-944bc0639a88",
 });
 
 export default api;

@@ -57,7 +57,6 @@ function App() {
     auth
       .checkToken(token)
       .then((data) => {
-        api.setToken(token);
         setUserEmail(data.data.email);
         setIsLoggedIn(true);
         loadMainData();
@@ -187,7 +186,6 @@ function App() {
       .then((data) => {
         if (data.token) {
           localStorage.setItem(TOKEN_KEY, data.token);
-          api.setToken(data.token);
           setUserEmail(email);
           setIsLoggedIn(true);
           loadMainData();
@@ -214,7 +212,6 @@ function App() {
 
   function handleSignOut() {
     localStorage.removeItem(TOKEN_KEY);
-    api.setToken("");
     setIsLoggedIn(false);
     setUserEmail("");
     setCards([]);
